@@ -1,0 +1,17 @@
+<div
+  class="search-box"
+>
+  <div class="search-field">
+    <div class="search-input">
+      <span class="material-icons search-field__icon">search</span>
+      <input
+        class="search-field__input"
+        type="text"
+        [(ngModel)]="inputField"
+        (focus)="searchS.changeInputState(true)"
+      >
+      <span class="material-icons search-field__icon close-icon" (click)="inputField = ''">close</span>
+    </div>
+    <button class="search-btn">Найти</button>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<header class="header">
+
+  <div class="header-left">
+    <div class="header-logo">
+      <div class="hamburger-menu">
+        <span class="material-icons">menu</span>
+      </div>
+      <div class="logo-container">
+        <img class="header-logo__title" src="assets/images/header-logo.png" alt="tile.expert logo">
+        <img class="header-logo__cursor" src="assets/images/header-logo-cursor.png" alt="tile.expert logo-cursor">
+      </div>
+    </div>
+
+    <app-header-nav class="header-nav"></app-header-nav>
+  </div>
+
+  <div class="header-right">
+    <div class="header-tools">
+      <span class="material-icons header-tools__envelop">markunread</span>
+      <div class="header-tools__notification">
+        <span class="material-icons header-tools">notifications_none</span>
+        <div class="notification-number">
+          <span>{{notifications.length}}</span>
+        </div>
+      </div>
+      <div class="header-profile">
+        <img src="assets/images/header-logo-profile.png" alt="profile logo">
+      </div>
+    </div>
+  </div>
+
+</header>
