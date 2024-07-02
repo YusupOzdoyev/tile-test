@@ -4,6 +4,7 @@ import { Directive, ElementRef, EventEmitter, HostListener, Output, ViewContaine
   selector: '[appRef]'
 })
 export class RefDirective {
+  ViewContainerRef: any;
 
   constructor(
     public containerRef: ViewContainerRef

@@ -11,11 +11,12 @@ import { HeaderSearchInputComponent } from '../header-search-input/header-search
 import { RefDirective } from '../../ref.directive';
 import { HeaderSearchInputService } from '../../header-search-input.service';
 import { CommonModule } from '@angular/common';
+import { SvgIconComponent } from '../svg-icon/svg-icon.component';
 
 @Component({
   selector: 'app-header-nav',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, SvgIconComponent],
   templateUrl: './header-nav.component.html',
   styleUrls: ['./header-nav.component.scss'],
   providers: [HeaderSearchInputService]
@@ -34,12 +35,11 @@ export class HeaderNavComponent implements OnInit {
   checkBoxItems: string[] = ['я участник', 'в заголовке', 'строгий поиск']
 
   menu: IMenuItem[] = [
-    {id: 0, label: 'ссылки', isSubMenu: true},
-    {id: 1, label: 'контакты', isSubMenu: false},
-    {id: 2, label: 'теги', isSubMenu: true},
-    {id: 3, label: 'просьбы', isSubMenu: true},
-    {id: 4, label: 'избранное', isSubMenu: true},
-    {id: 5, label: 'посещения', isSubMenu: true},
+    { id: 0, label: 'Ссылки', img: 'link', isSubMenu: true },
+    { id: 1, label: 'Контакты', img: 'contacts', isSubMenu: false },
+    { id: 2, label: 'Теги', img: 'lattice', isSubMenu: true },
+    { id: 3, label: 'Избранное', img: 'star', isSubMenu: true },
+    { id: 4, label: 'Посещения', img: 'recent', isSubMenu: true },
   ];
 
   isHeaderInputShown = false;

@@ -60,6 +60,12 @@
     background-color: #fff;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   }
+  
+  svg {
+    width: 24px;
+    height: 24px;
+    color: var(--primary-color);
+  }
 
   @media only screen and (max-width: 1365px) {
     .header-list {

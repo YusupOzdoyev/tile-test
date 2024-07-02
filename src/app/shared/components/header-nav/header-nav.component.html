@@ -1,44 +1,42 @@
 <div class="header-nav" #headerNav>
   <ul class="header-list">
-    <li
-      *ngFor="let item of menu"
-      class="header-list__item"
-    >
-      {{item.label}}
-      <span *ngIf="item.isSubMenu" class="material-icons">arrow_drop_down</span>
+    <li *ngFor="let item of menu">
+      <a routerLinkActive="active" class="header-list__item">
+        <svg [icon]="item.img"></svg>
+        <span>{{ item.label }}</span>
+      </a>
     </li>
   </ul>
   <div class="header-toolbox">
-    <span class="material-icons header-toolbox__search" (click)="showInput()">search</span>
+    <span class="material-icons header-toolbox__search" (click)="showInput()"
+      >search</span
+    >
     <span class="material-icons header-toolbox__add" #addIcon>add_circle</span>
   </div>
 
-  <ng-template
-    class="header-search-input"
-    appRef
-  >
-  </ng-template>
+  <ng-template class="header-search-input" appRef> </ng-template>
 
-  <div
-    *ngIf="searchS.inputState | async"
-    class="header-search-form"
-    appRef
-  >
+  <div *ngIf="searchS.inputState | async" class="header-search-form" appRef>
     <div class="form-group">
-      <input id="my" class="form-check-input" type="checkbox">
+      <input id="my" class="form-check-input" type="checkbox" />
       <label for="my" class="form-check-label">мои</label>
-      <input class="form-control" type="text" placeholder="Автор">
+      <input class="form-control" type="text" placeholder="Автор" />
     </div>
     <div class="form-group">
       <label class="form-select-label">Сортировать по:</label>
       <select class="form-select" type="text" placeholder="Автор">
-        <option *ngFor="let item of sortItems" [value]="item">{{item}}</option>
+        <option *ngFor="let item of sortItems" [value]="item">
+          {{ item }}
+        </option>
       </select>
     </div>
     <div class="form-group form-group-checkbox">
-      <div *ngFor="let item of checkBoxItems; let idx = index" class="form-check-inline">
-        <input [id]="idx" class="form-check-input" type="checkbox">
-        <label [for]="idx" class="form-check-label">{{item}}</label>
+      <div
+        *ngFor="let item of checkBoxItems; let idx = index"
+        class="form-check-inline"
+      >
+        <input [id]="idx" class="form-check-input" type="checkbox" />
+        <label [for]="idx" class="form-check-label">{{ item }}</label>
       </div>
     </div>
   </div>
